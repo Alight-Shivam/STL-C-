@@ -1,7 +1,3 @@
-// Normal Sets
-// Unordered Sets
-// Multisets
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -15,12 +11,12 @@ void print(set<string> &s){
 }
 
 int main(){
-set<string> s;
-s.insert("abc");   // O(log(n))
+unordered_set<string> s;
+s.insert("abc");   // O(1)
 s.insert("zsdf");
 s.insert("bcd");
 s.insert("abc");
-auto it = s.find("abcd");  //O(log(n))
+auto it = s.find("abcd");  //O(1)
 if(it != s.end()){
     s.erase(it);
 }
